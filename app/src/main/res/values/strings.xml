@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="app_name">Autexel</string>
+ <string name="app_description">Scan handwritten text and convert to Excel or Invoice PDF - 100% on-device, no internet needed.</string>
+ <string name="scan_to_excel">Scan to Excel</string>
+ <string name="scan_to_invoice">Scan to Invoice</string>
+ <string name="capture">Capture</string>
+ <string name="retake">Retake</string>
+ <string name="processing">Processing...</string>
+ <string name="export_excel">Export as Excel</string>
+ <string name="generate_invoice">Generate Invoice</string>
+ <string name="download">Download</string>
+ <string name="open_file">Open File</string>
+ <string name="file_saved">File saved to Downloads!</string>
+ <string name="add_row">+ Add Row</string>
+ <string name="add_column">+ Add Column</string>
+ <string name="save_changes">Save Changes</string>
+</resources>

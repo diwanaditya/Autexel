@@ -1,0 +1,10 @@
+IMPORTANT: gradle-wrapper.jar is NOT included (binary file).
+
+Android Studio will automatically download it when you open the project.
+Just open the project in Android Studio and click "OK" on any sync prompts.
+
+If you prefer manual setup, run this in the project root:
+  gradle wrapper --gradle-version 8.2
+
+Or download from:
+  https://services.gradle.org/distributions/gradle-8.2-bin.zip

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+ android:layout_width="match_parent"
+ android:layout_height="match_parent"
+ android:background="@color/background">
+
+ <!-- Toolbar -->
+ <com.google.android.material.appbar.MaterialToolbar
+ android:id="@+id/toolbar"
+ android:layout_width="match_parent"
+ android:layout_height="?attr/actionBarSize"
+ android:background="@color/primary"
+ app:title="Excel Editor"
+ app:titleTextColor="#FFFFFF"
+ app:navigationIcon="@drawable/ic_back"
+ app:navigationIconTint="#FFFFFF"
+ app:layout_constraintTop_toTopOf="parent" />
+
+ <!-- Raw Text Edit Box -->
+ <com.google.android.material.textfield.TextInputLayout
+ android:id="@+id/tilRawText"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:layout_marginHorizontal="16dp"
+ android:layout_marginTop="12dp"
+ style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+ app:hint="Extracted Text (editable)"
+ app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+ <com.google.android.material.textfield.TextInputEditText
+ android:id="@+id/etRawText"
+ android:layout_width="match_parent"
+ android:layout_height="120dp"
+ android:gravity="top"
+ android:inputType="textMultiLine"
+ android:scrollbars="vertical" />
+ </com.google.android.material.textfield.TextInputLayout>
+
+ <!-- Parse Button -->
+ <com.google.android.material.button.MaterialButton
+ android:id="@+id/btnParse"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:layout_marginHorizontal="16dp"
+ android:layout_marginTop="8dp"
+ android:text="[PARSE] Parse into Table"
+ app:cornerRadius="12dp"
+ app:layout_constraintTop_toBottomOf="@id/tilRawText" />
+
+ <!-- Table Header Row -->
+ <LinearLayout
+ android:id="@+id/tableToolbar"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:orientation="horizontal"
+ android:paddingHorizontal="16dp"
+ android:paddingVertical="8dp"
+ app:layout_constraintTop_toBottomOf="@id/btnParse">
+
+ <com.google.android.material.button.MaterialButton
+ android:id="@+id/btnAddRow"
+            android:contentDescription="Add a new row to the table"
+ android:layout_width="0dp"
+ android:layout_weight="1"
+ android:layout_height="40dp"
+ android:text="+ Row"
+ android:textSize="13sp"
+ android:layout_marginEnd="8dp"
+ app:cornerRadius="8dp"
+ style="@style/Widget.Material3.Button.OutlinedButton" />
+
+ <com.google.android.material.button.MaterialButton
+ android:id="@+id/btnAddColumn"
+            android:contentDescription="Add a new column to the table"
+ android:layout_width="0dp"
+ android:layout_weight="1"
+ android:layout_height="40dp"
+ android:text="+ Col"
+ android:textSize="13sp"
+ android:layout_marginEnd="8dp"
+ app:cornerRadius="8dp"
+ style="@style/Widget.Material3.Button.OutlinedButton" />
+
+ <com.google.android.material.button.MaterialButton
+ android:id="@+id/btnDeleteRow"
+            android:contentDescription="Delete the last row from the table"
+ android:layout_width="0dp"
+ android:layout_weight="1"
+ android:layout_height="40dp"
+ android:text="- Row"
+ android:textSize="13sp"
+ app:cornerRadius="8dp"
+ style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUndo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:text="Undo"
+            android:textSize="13sp"
+            android:contentDescription="Undo last table change"
+            android:layout_marginStart="8dp"
+            android:enabled="false"
+            app:cornerRadius="8dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRedo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:text="Redo"
+            android:textSize="13sp"
+            android:contentDescription="Redo last undone change"
+            android:layout_marginStart="8dp"
+            android:enabled="false"
+            app:cornerRadius="8dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+ </LinearLayout>
+
+ <!-- Scrollable Table -->
+ <HorizontalScrollView
+ android:id="@+id/hScrollView"
+ android:layout_width="match_parent"
+ android:layout_height="0dp"
+ android:layout_marginTop="4dp"
+ app:layout_constraintTop_toBottomOf="@id/tableToolbar"
+ app:layout_constraintBottom_toTopOf="@id/bottomBar">
+
+ <ScrollView
+ android:layout_width="wrap_content"
+ android:layout_height="match_parent">
+
+ <LinearLayout
+ android:id="@+id/tableContainer"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:orientation="vertical"
+ android:padding="8dp" />
+ </ScrollView>
+ </HorizontalScrollView>
+
+ <!-- Bottom Action Bar -->
+ <LinearLayout
+ android:id="@+id/bottomBar"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:orientation="horizontal"
+ android:padding="16dp"
+ android:background="@color/surface"
+ android:elevation="8dp"
+ app:layout_constraintBottom_toBottomOf="parent">
+
+ <com.google.android.material.button.MaterialButton
+ android:id="@+id/btnExport"
+            android:contentDescription="Export table as Excel file"
+ android:layout_width="0dp"
+ android:layout_weight="1"
+ android:layout_height="52dp"
+ android:text="[SAVE] Export Excel"
+ android:textStyle="bold"
+ android:layout_marginEnd="8dp"
+ app:cornerRadius="12dp" />
+
+ <com.google.android.material.button.MaterialButton
+ android:id="@+id/btnOpenFile"
+            android:contentDescription="Open the saved Excel file"
+ android:layout_width="0dp"
+ android:layout_weight="1"
+ android:layout_height="52dp"
+ android:text="Open"
+            android:layout_marginEnd="8dp"
+ android:visibility="gone"
+ app:cornerRadius="12dp"
+ style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="52dp"
+            android:text="Share"
+            android:visibility="gone"
+            android:contentDescription="Share the saved Excel file"
+            app:cornerRadius="12dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnalyse"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:text="Analyse Data"
+            android:contentDescription="Analyse table data and get statistics"
+            app:cornerRadius="12dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+ </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

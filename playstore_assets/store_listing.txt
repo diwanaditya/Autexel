@@ -1,0 +1,99 @@
+===================================================
+AUTEXEL - PLAY STORE LISTING (COPY-PASTE READY)
+===================================================
+
+APP NAME (max 50 chars - 34 used):
+Autexel - Scan to Excel and Invoice
+
+---------------------------------------------------
+SHORT DESCRIPTION (max 80 chars - 73 used):
+Scan handwritten text and export to Excel or PDF invoice. Works fully offline.
+
+---------------------------------------------------
+FULL DESCRIPTION (max 4000 chars):
+
+Turn handwritten notes, tables, and bills into digital files in seconds.
+Autexel uses on-device text recognition to read your handwriting and convert
+it into structured Excel spreadsheets or professional PDF invoices - no
+internet connection required.
+
+SCAN TO EXCEL
+- Point your camera at any handwritten data - tables, lists, notes
+- Intelligent parsing detects data structure automatically
+- Edit the recognized text before it becomes a table
+- Add or remove rows and columns directly in the app
+- Export as .xlsx - compatible with Microsoft Excel and Google Sheets
+- File saved to your Downloads folder instantly
+
+SCAN TO INVOICE
+- Scan handwritten bills, receipts, or order notes
+- Automatically detects item names, quantities, and prices
+- Fill in company name, customer name, invoice number, and date
+- Edit every field before generating - nothing is locked
+- Auto-calculates subtotal, tax, and grand total
+- Generates a clean, professional PDF invoice
+- Saved to Downloads with one tap to open
+
+EDIT BEFORE YOU EXPORT
+Every scan gives you complete control. Review and edit the extracted text,
+modify table cells, adjust invoice line items, add rows, or correct any
+recognition errors before anything is saved.
+
+FULLY OFFLINE - NO ACCOUNT NEEDED
+- Uses Google ML Kit for text recognition (runs entirely on device)
+- No internet connection required after install
+- No account, login, or sign-up
+- No data is ever uploaded or shared
+- Works in airplane mode
+
+OPEN AND SHARE INSTANTLY
+After exporting, tap "Open File" to view your spreadsheet or invoice
+immediately. Files are saved to your Downloads folder and can be shared
+with any app on your device.
+
+WHO IS THIS FOR
+- Small business owners who write orders or bills by hand
+- Students who want to digitize handwritten class notes or data
+- Accountants and bookkeepers digitizing paper records
+- Field workers collecting data without connectivity
+- Anyone who writes things down and wants them in digital format
+
+SUPPORTED OUTPUT FORMATS
+- Excel: .xlsx (opens in Microsoft Excel, Google Sheets, LibreOffice)
+- Invoice: PDF (professional layout, printable, shareable)
+
+PERMISSIONS USED
+- Camera: required to capture images for text recognition
+- Storage: required to save exported files to your Downloads folder
+
+REQUIREMENTS
+- Android 8.0 (API level 26) or higher
+- Camera hardware
+
+---------------------------------------------------
+CATEGORY: Productivity
+
+CONTENT RATING: Everyone (no mature content)
+
+TAGS (for internal reference, not submitted):
+OCR, scanner, handwriting recognition, Excel export, invoice generator,
+PDF creator, offline, spreadsheet, text recognition, digitize notes,
+small business, accounting, productivity
+
+---------------------------------------------------
+RELEASE NOTES - Version 1.0:
+
+Initial release.
+- Camera-based text scanning with on-device AI recognition
+- Export scanned data to Excel spreadsheets (.xlsx)
+- Generate professional PDF invoices from scanned text
+- Built-in table editor: add, remove, and edit rows and columns
+- Built-in invoice editor: edit all fields before PDF generation
+- Files saved directly to device Downloads folder
+- Works fully offline - no internet or account required
+
+===================================================
+PRIVACY POLICY URL:
+Host playstore_assets/privacy_policy.html online (see README for free options)
+and paste the URL here before submitting to Play Store.
+===================================================
